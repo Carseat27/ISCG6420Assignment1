@@ -23,7 +23,7 @@
 
 /*background beach*/
 #beachBackground{
-    position: fixed;
+    position: absolute;
     z-index: 0;
 }
 #beachBackground img{
