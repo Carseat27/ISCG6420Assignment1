@@ -1,0 +1,76 @@
+#bookForm{
+    position: fixed;
+    background-color: whitesmoke;
+    margin: 100px auto;
+    margin-top: 175px;
+    padding: 40px;
+    width: 70%;
+    width: 600px;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    border: 1px solid #aaaaaa;
+}
+
+input.invalid{
+    background-color: #ffdddd;
+}
+
+.inputGroup {
+    padding-top: 8px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/*hides all by default*/
+.tab{
+    display: none;
+}
+
+button{
+    background-color: aqua;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.75;
+}
+
+#backPage{
+    background-color: #bbbbbb;
+}
+
+.progress{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb ;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.3;
+}
+
+.progress.active{
+    opacity: 1;
+}
+
+.progress.finish{
+    background-color: red;
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ="stylesheet" href="topBanner.css">
+        <link rel="stylesheet" href="book.css">
+        <link rel="stylesheet" href="carBanner.css">
+    </head>
+    <body>
+        <!--link box for documents-->
+        <div id="linkBox">
+            <a title="Storyboard 1" href="Documents/Storyboard 1.pdf" target="_blank">Storyboard 1</a><br>
+            <a title="Storyboard 2" href="Documents/Storyboard 2.pdf" target="_blank">Storyboard 2</a><br>
+            <a title="Wireframes" href="Documents/WireFrame.pdf" target="_blank">Wireframes</a>
+        </div>
+        <!-- Part1 Banner Advert-->
+        <div id="bannerBox">
+            <a title="Visit Piha" href="https://www.piha.co.nz" target="_blank">
+                <div id="beachBackground"><img src="beachBackground.jpg"></div>
+                <div id="pihaTitle"></div>
+                <div id="pihaBook">Book today!</div>
+                <div id="studentDetails">Carson Loveday ID: 1553239</div>
+                <div id="beach1"><img src="beach1.jpg"></div>
+                <div id="beach2"><img src="beach2.jpg"></div>
+            </a>
+        </div>
+
+        <!--Part2 Recreated Advert-->
+        <div id="banner2Box">
+                <div id="carText1">Spinning</div>
+                <div id="carText2">car wheels</div>
+                <div id="carText3">LEARN MORE!</div>
+                <div id="carStudentDetails">Carson Loveday ID: 1553239</div>
+                <div id="replayButton"><button type="button" class="replayButton" onclick="restartAnimation()">Replay</button></div>
+                <div id="adButton"><a title="Visit" href="https://www.audi.co.nz" target="_blank" class="adButton">Visit</a></div>
+                <div id="trackBackground"><img src="trackBackground.jpg"></div>
+                <div id="carBox">
+                    <img src="car.png" id="car">
+                    <div id="wheelBox">
+                        <div id="wheel1">
+                            <img src="wheelRim.png" id="rim1">
+                        </div>
+                        <div id="wheel2">
+                            <img src="wheelRim.png" id="rim2">
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!--Part3 Booking system-->
+        <form id="bookForm">
+            <h1>Booking:</h1>
+            <!--tabs for the form-->
+            <div class="tab">Personal Details:<br><br>
+                <label for="fName">First Name:</label>
+                <input type="text" id="fName" name="fName"><br>
+                <label for="lName">Last Name:</label>
+                <input type="text" id="lName" name="lName"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone"><br>
+                <label for="DoB">Date of Birth:</label>
+                <input type="date" id="DoB" min="1900-12-12" max="2022-12-31" name="Date of Birth"><br>
+                <div class="inputGroup">
+                    <label for="male">Male</label>
+                    <input id="male" name="gender" type="radio" value="male">
+                    <label for="female">Female</label>
+                    <input id="female" name="gender" type="radio" value="female">
+                    <label for="other">Other</label>
+                    <input id="other" name="gender" type="radio" value="other">
+                </div>
+                <div class="inputGroup">
+                    <label for="color">Favourite Colour:</label>
+                    <input type="color" id="color" name="Color" value="#FE2D00">
+                </div>
+            </div>
+            <div class="tab">Trip Details:<br><br>
+                <label for="checkIn">Check in Date:</label>
+                <input type="date" id="checkInDate" name="Check in Date">
+                <label for="checkOut">Check out Date:</label>
+                <input type="date" id="checkOutDate" name="Check out Date">
+                <label for="adults">No. of Adults:</label>
+                <input type="number" id="adults" name="adults" min="1">
+                <label for="children">No. of Children:</label>
+                <input type="number" id="children" name="children" min="0">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="Room Type">
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Family(5)">Family(5)</option>
+                    <option value="Group(10)">Group(10)</option>
+                </select>
+                <div class="inputGroup">
+                    <label for="cookingFacilities">Are cooking facilities required?</label>
+                    <input type="checkbox" id="cooking" name="Cooking Required" value="Yes">
+                </div>
+                <div class="inputGroup">
+                    <label for="swimmingEquipment">Do you require use of swimming equipment?</label>
+                    <input type="checkbox" id="swimming" name="Swimming Required" value="Yes">
+                </div>
+            </div>
+            <div class="tab">Payment Details:<br><br>
+                <label for="cardholder">Cardholder:</label>
+                <input type="text" id="cardholder" name="Cardholder">
+                <label for="cardNumber">Card Number:</label>
+                <input type="tel" id="cardNumber" name="Card number" placeholder="0000 0000 0000 0000" maxlength="16">
+                <label for="expiry">Expiry:</label>
+                <input type="text" id="expiry" name="expiry">
+                <label for="cvv">CVV:</label>
+                <input type="tel" id="cvv" name="cvv" placeholder="000" maxlength="3">
+                <div class="inputGroup">
+                    <label for="Ts&Cs">I agree to the Terms and Conditions</label>
+                    <input type="checkbox" id="TsCs" name="Ts&Cs" value="Agreed">
+                </div>
+                <div class="inputGroup">
+                    <label for="rateUs">Rate your experience(0-10)</label>
+                    <input type="range" id="rate" name="rate" min="0" max="10">
+                </div>
+            </div>
+            <div class="tab">Your Submitted Details:<br><br>
+                <label for="DtFName">First Name:</label>
+                <div id="DtFName"></div>
+                <label for="DtLName">Last Name:</label>
+                <div id="DtLName"></div>
+                <label for="DtEmail">Email:</label>
+                <div id="DtEmail"></div>
+                <label for="DtPhone">Phone:</label>
+                <div id="DtPhone"></div>
+                <label for="DtDoB">DoB:</label>
+                <div id="DtDoB"></div>
+                <label for="DtGender">Gender:</label>
+                <div id="DtGender"></div>
+                <label for="DtColor">Favourite Colour:</label>
+                <div id="DtColor"></div><br>
+                <label for="DtCheckIn">Check-in Date:</label>
+                <div id="DtCheckIn"></div>
+                <label for="DtCheckOut">Check-out Date:</label>
+                <div id="DtCheckOut"></div>
+                <label for="DtAdults">No. of Adults:</label>
+                <div id="DtAdults"></div>
+                <label for="DtChildren">No. of Children</label>
+                <div id="DtChildren"></div>
+                <label for="DtRoomType">Room Type:</label>
+                <div id="DtRoomType"></div>
+                <label for="DtCooking">Cooking Facilities:</label>
+                <div id="DtCooking"></div>
+                <label for="DtSwimming">Swimming Equipment:</label>
+                <div id="DtSwimming"></div><br>
+                <label for="DtCardholder">Cardholder:</label>
+                <div id="DtCardholder"></div>
+                <label for="DtCardNumber">Card Number:</label>
+                <div id="DtCardNumber"></div>
+                <label for="DtExpiry">Expiry:</label>
+                <div id="DtExpiry"></div>
+                <label for="DtCVV">CVV:</label>
+                <div id="DtCVV"></div>
+                <label for="DtTsCs">Terms and Conditions:</label>
+                <div id="DtTsCs"></div>
+                <label for="DtRating">Rating:</label>
+                <div id="DtRating"></div>
+            </div>
+            <!--buttons-->
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="backPage" onclick="nextPrev(-1)">Back</button>
+                    <button type="button" id="nextPage" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+
+            <!--progress circles-->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="progress"></span>
+                <span class="progress"></span>
+                <span class="progress"></span>
+                <span class="progress"></span>
+            </div>
+        </form>
+        
+    </body>
+    <script>
+        var currentTab = 0;
+        showTab(currentTab);
+
+        function showTab(n) {
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            if(n == 0){
+                document.getElementById("backPage").style.display = "none";
+            } else{
+                document.getElementById("backPage").style.display = "inline";
+            }
+            if (n ==(x.length-2)){
+                document.getElementById("nextPage").style.display = "inline";
+                document.getElementById("nextPage").innerHTML = "Submit";
+            }
+            else if(n==(x.length-1)){
+                document.getElementById("nextPage").style.display = "none";
+                getInputs();
+            } 
+            else{
+                document.getElementById("nextPage").style.display = "inline";
+                document.getElementById("nextPage").innerHTML = "Next";
+            }
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n){
+            var x = document.getElementsByClassName("tab");
+            if(n==1 && !validate()) return false;
+            x[currentTab].style.display = "none";
+            currentTab = currentTab + n;
+            if(currentTab >= x.length){
+                document.getElementById("bookingForm").submit()
+                return false;
+            }
+            showTab(currentTab);
+        }
+
+        function validate(){
+            //does validation
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            //looping to check
+            for(i = 0; i<y.length;i++){
+                //if empty
+                if(y[i].value ==""){
+                    y[i].className += " invalid";
+                    valid = false;
+                }
+            }
+            //all fields have inputs
+            if(valid){
+                document.getElementsByClassName("progress")[currentTab].className += " finish";
+            }
+            return valid;
+        }
+
+        function fixStepIndicator(n){
+            var i, x = document.getElementsByClassName("progress");
+            for(i=0; i<x.length;i++){
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            x[n].className += " active";
+        }
+
+        function getInputs(){
+            //page1
+            document.getElementById("DtFName").innerHTML = document.getElementById("fName").value;
+            document.getElementById("DtLName").innerHTML = document.getElementById("lName").value;
+            document.getElementById("DtEmail").innerHTML = document.getElementById("email").value;
+            document.getElementById("DtPhone").innerHTML = document.getElementById("phone").value;
+            document.getElementById("DtDoB").innerHTML = document.getElementById("DoB").value;
+
+            if (document.getElementById("male").checked){
+                document.getElementById("DtGender").innerHTML = "Male";
+            }
+            else if (document.getElementById("female").checked){
+                document.getElementById("DtGender").innerHTML = "Female";
+            }
+            else{
+                document.getElementById("DtGender").innerHTML = "Other";
+            }
+            
+            document.getElementById("DtColor").innerHTML = document.getElementById("color").value;
+
+            //page2
+            document.getElementById("DtCheckIn").innerHTML = document.getElementById("checkInDate").value;
+            document.getElementById("DtCheckOut").innerHTML= document.getElementById("checkOutDate").value;
+            document.getElementById("DtAdults").innerHTML = document.getElementById("adults").value;
+            document.getElementById("DtChildren").innerHTML = document.getElementById("children").value;
+            document.getElementById("DtRoomType").innerHTML = document.getElementById("roomType").value;
+            document.getElementById("DtCooking").innerHTML = document.getElementById("cooking").checked;
+            document.getElementById("DtSwimming").innerHTML = document.getElementById("swimming").checked;
+            //page3
+            document.getElementById("DtCardholder").innerHTML = document.getElementById("cardholder").value;
+            document.getElementById("DtCardNumber").innerHTML = document.getElementById("cardNumber").value;
+            document.getElementById("DtExpiry").innerHTML = document.getElementById("expiry").value;
+            document.getElementById("DtCVV").innerHTML = document.getElementById("cvv").value;
+            document.getElementById("DtTsCs").innerHTML = document.getElementById("TsCs").checked;
+            document.getElementById("DtRating").innerHTML = document.getElementById("rate").value;
+        }
+
+        function restartAnimation(){
+            //call each element and use reflow
+            //'element.offsetWidth' triggers the reflow
+            var element;
+            element = document.getElementById("carBox");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+
+            element = document.getElementById("wheel1");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+
+            element = document.getElementById("wheel2");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+
+            element = document.getElementById("carText1");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+
+            element = document.getElementById("carText2");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+
+            element = document.getElementById("carText3");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+
+            element = document.getElementById("carStudentDetails");
+            element.style.animation = 'none';
+            element.offsetWidth;
+            element.style.animation = null;
+        }
+    </script>
+</html>
